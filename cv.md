@@ -11,6 +11,11 @@
 ### SKILLS:
     * They are clearly there (while studying at the university we touched upon different languages / did assignments), but now I will not brag about them:В
 
+### CODE:
+function multiply(a , b){
+    return a * b
+}
+
 ### EDUCATION: 
 BELARUSIAN STATE PEDAGOGICAL UNIVERSITY
 NAMED AFTER MAXIM TANK
