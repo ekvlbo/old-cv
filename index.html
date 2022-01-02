@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>EKATERINA BOSALKINA CV</title>
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+
+</head>
+
+<body>
+	<div class="container">
+		<header>
+			<h1>Ekaterina Bosalkina</h1>
+			<img src="https://avatars.githubusercontent.com/u/93683718?v=4" alt="Nastya Kazakova">
+		</header>
+		<main>
+			<article>
+				<h2>MY CONTACTS:</h2>
+				<ul class="personal-data">
+					<li> <mark><i>Phone</i></mark>
+						<span>+375 29 747 84 17</span>
+					</li>
+					<li>
+						<i>Email</i>
+						<span>ekaterina.bosalkina@mail.ru</span>
+					</li>
+					<li>
+						<i>Telegram</i>
+						<span>@ekvlbo</span>
+					</li>
+					<li>
+						<i>Github</i>
+						<a href="https://github.com/ekvlbo">ekvlbo</a>
+					</li>
+				</ul>
+			</article>
+			<article>
+				<h2>About me</h2>
+				<h4>Too young to talk about great experiences in my life :) 
+					But! Purposeful enough, because in life everything was not always easy. 
+					I have been working as a teacher of informatics for 3 years already. 
+					(But during this time I was only trying to join the process of working out, at the same time I did not find time to learn the front-end.) 
+					Now is focused on the result! Yes, I don't wow with English either, but I will work on these;)</h4>
+			</article>
+			<article>
+				<h2>Skills</h2>
+				<ul>
+					<li>HTML</li>
+					<li>CSS</li>
+				</ul>
+			</article>
+
+			<article>
+				<h2>Education</h2>
+				<p>teacher of physics and computer science at BSPU</p>
+			</article>
+			<article>
+				<h2>English</h2>
+				<p>A2</p>
+			</article>
+			<article>
+				<details>
+					<summary>
+					<h4>	Code examples</h4>
+					</summary>
+					<code>
+						function get(url) {<br>
+							return new Promise(function(succeed, fail) {<br>
+									var request = new XMLHttpRequest();<br>
+									request.open("GET", url, true);<br>
+									request.addEventListener("load", function() {<br>
+											if (request.status < 400)<br>
+													succeed(request.response);<br>
+											else<br>
+													fail(new Error("Request failed: " + request.statusText));<br>
+									});<br>
+									request.addEventListener("error", function() {<br>
+											fail(new Error("Network error"));<br>
+									});<br>
+									request.send();<br>
+							});<br>
+					}<br>
+					
+					
+					var req1 = get("https://reqres.in/api/users?per_page_1").then(function(response) {<br>
+									console.log(response);<br>
+									return JSON.parse(response);<br>
+					}).then(function(data) {<br>
+									console.log(data[0]);<br>
+					});<br>
+					var req2 = get("https://reqres.in/api/users?per_page=12").then(function(response) {<br>
+									console.log(response);<br>
+									return JSON.parse(response);<br>
+					}).then(function(data) {<br>
+									console.log(data[0]);<br>
+					});<br>
+					
+					Promise.all([req1, req2]).then(values => {<br>
+							console.log('оба ответа получены');<br>
+					});<br>
+				</code>
+				</details>
+			</article>
+		</main>
+		<footer>
+			<h5>2022</h5>
+			<a href="https://github.com/ekvlbo">
+				<img src="git.png" alt="github">
+			</a>
+			<a href="https://rs.school/js/">
+				<img src="rs_school_js.svg" alt="rs.school">
+			</a>
+			<a href="#">
+				<img src="YouTube_full-color_icon_(2017).svg" alt="YouTube">
+			</a>
+		</footer>
+	</div>
+</body>
+
+</html>
